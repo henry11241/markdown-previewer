@@ -22,8 +22,6 @@ export default function RootLayout({
         src="https://kit.fontawesome.com/7f16c284d6.js"
         crossOrigin="anonymous"
       />
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" />
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.4/purify.min.js" />
     </html>
   )
 }
