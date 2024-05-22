@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(75 85 99);
+}
+
+.hidden {
+  display: none;
+}
+
+.extend {
+  max-width: 700px;
+  width: 700px;
+}
+
+.extend > textarea {
+  height: 1200px;
 }
