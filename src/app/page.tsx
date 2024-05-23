@@ -10,6 +10,7 @@ import { marked } from 'marked'
 export default function Home() {
   const [input, setInput] = useState(exampleData)
   const [extend, setExtend] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const displayData = async (data: string) => {
     const parsed = await marked.parse(data)
     const clean = DOMPurify.sanitize(parsed)
@@ -30,6 +31,10 @@ export default function Home() {
 
   useEffect(() => {
     displayData(exampleData)
+    const markdownBody = document.querySelector('.markdown-body')
+    const loadingContainer = document.querySelector('.loading-container')
+    markdownBody.classList.remove('hidden')
+    loadingContainer.classList.add('hidden')
   }, [])
 
   return (
